@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+    <head>  
+        <title>success</title>  
+    </head> 
+    <style>
+        h1 {text-align: center;}
+        h3 {text-align: center;}
+        h5 {text-align: center; margin-bottom: 2cm;}
+        p {text-align: center;}
+        div {text-align: center;}
+        form {text-align: center;}
+        html{
+            display: flex;
+            flex-flow: row nowrap;  
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            height:100%;
+            margin: 0;
+            padding: 0;
+            background:#eeeeee;
+        }
+        body {
+            margin: 0;
+            flex: 0 1 auto;
+            align-self: auto;
+            /*recommend 1920 / 1080 max based on usage stats, use 100% to that point*/
+            width: 100%;
+            max-width: 900px;
+            height: 100%;
+            max-height: 600px;
+            background:#fafafa;
+            -webkit-box-shadow: 0px 0px 96px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 0px 0px 96px 0px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 96px 0px rgba(0,0,0,0.75);
+        }
+    </style>
+
+    <body>
+        <h1>The School of AI</h1>
+        <h5> Sachin Dangyach & Vignesh Babu P J</h5>
+
+        <h3 style='color:green;'>Class Predicted successfully !!!</h3>  
+        <br>
+        <div class="info">
+            {{image|safe}}
+        </div>
+        <br>
+        <p>Class Name: <span style='color:red;'> <b>{{pred['class name']}}</b></span></p> 
+        <p>Prediction: <span style='color:blue'> <b>{{pred['pred value']}}</b></span></p> 
+
+        <form action = "/" >
+            <input type = "submit" class="btn btn-primary mb-2" value="Test Another Image">  
+        </form>
+    </body>  
+</html>  
